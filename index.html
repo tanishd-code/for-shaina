@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Shaina, With All My Love 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+</head>
+<body>
+  <!-- Floating background particles canvas -->
+  <canvas id="heartCanvas"></canvas>
+
+  <!-- Background Music Player Widget -->
+  <div class="music-player-widget" id="musicPlayer">
+    <button id="musicToggleBtn" title="Play 'I Wanna Be Yours'" aria-label="Toggle romantic music">
+      <span class="music-icon" id="musicIcon">🎵</span>
+      <span class="music-text" id="musicStatus">I Wanna Be Yours</span>
+    </button>
+  </div>
+
+  <main class="main-container">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="glow-orb orb-1"></div>
+      <div class="glow-orb orb-2"></div>
+      
+      <div class="hero-content">
+        <div class="love-badge">
+          <span class="pulse-heart">❤️</span> Dedicated to the most special girl in the world
+        </div>
+        
+        <h1 class="hero-title">
+          Hi, <span class="shaina-highlight">Shaina</span>
+        </h1>
+        
+        <div class="hero-quote-card">
+          <p class="hero-message">
+            "This is just to tell you that there is a man for you by the name of <span class="tanish-highlight">Tanish Dhiman</span> who loves you so much."
+          </p>
+        </div>
+
+        <p class="hero-subtitle">
+          Every love story is special, but ours is my absolute favorite. I made this little corner of the internet just for you ✨
+        </p>
+
+        <div class="hero-actions">
+          <a href="#letter" class="primary-btn">
+            <span>Open My Letter 💌</span>
+          </a>
+          <a href="#journey" class="secondary-btn">
+            <span>Our Journey ⏳</span>
+          </a>
+          <a href="#song" class="secondary-btn">
+            <span>Our Song 🎵</span>
+          </a>
+          <a href="#reasons" class="secondary-btn">
+            <span>Why I Love You 💕</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anniversary / Days Together Section -->
+    <section class="section counter-section" id="journey">
+      <div class="section-header">
+        <span class="section-tag">Since June 14, 2026</span>
+        <h2 class="section-title">Our Journey Together</h2>
+        <p class="section-subtitle">Every single second since June 14, 2026 has been pure magic</p>
+      </div>
+
+      <div class="counter-card">
+        <div class="counter-grid">
+          <div class="counter-box">
+            <span class="counter-number" id="countDays">00</span>
+            <span class="counter-label">Days</span>
+          </div>
+          <div class="counter-divider">:</div>
+          <div class="counter-box">
+            <span class="counter-number" id="countHours">00</span>
+            <span class="counter-label">Hours</span>
+          </div>
+          <div class="counter-divider">:</div>
+          <div class="counter-box">
+            <span class="counter-number" id="countMinutes">00</span>
+            <span class="counter-label">Minutes</span>
+          </div>
+          <div class="counter-divider">:</div>
+          <div class="counter-box">
+            <span class="counter-number" id="countSeconds">00</span>
+            <span class="counter-label">Seconds</span>
+          </div>
+        </div>
+        <p class="counter-quote">
+          "Started on <strong>June 14, 2026</strong>. Laughing with you, caring for you, and falling deeper in love every moment."
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactive Love Letter Section -->
+    <section class="section letter-section" id="letter">
+      <div class="section-header">
+        <span class="section-tag">A Letter From Tanish</span>
+        <h2 class="section-title">Straight From My Heart</h2>
+        <p class="section-subtitle">Click the envelope below to open your letter</p>
+      </div>
+
+      <div class="envelope-wrapper">
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-pocket"></div>
+          <div class="wax-seal" id="waxSeal">
+            <span>T ❤️ S</span>
+          </div>
+          <div class="letter-paper" id="letterPaper">
+            <div class="letter-inner">
+              <span class="letter-date" id="letterDate">Forever & Always</span>
+              <h3 class="letter-greeting">Dearest Shaina,</h3>
+              <p>
+                From the moment you walked into my life, everything became brighter, warmer, and full of color. Your smile has this magical superpower of making any hard day vanish, and hearing your laugh will always be my absolute favorite melody.
+              </p>
+              <p>
+                Whenever I look back at my happiest memories, they all have one thing in common: <strong>you</strong>. You inspire me to be better every single day, and loving you is the easiest, sweetest thing I have ever known.
+              </p>
+              <p>
+                No matter where life takes us or what tomorrow brings, remember that you have someone in your corner who cherishes you, believes in you, and loves you with every ounce of his heart.
+              </p>
+              <div class="letter-signature">
+                <p>Yours forever,</p>
+                <h4>Tanish Dhiman 💖</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="envelope-hint" id="envelopeHint">✨ Click the seal to open</p>
+      </div>
+    </section>
+
+    <!-- Reasons Why I Love You Section -->
+    <section class="section reasons-section" id="reasons">
+      <div class="section-header">
+        <span class="section-tag">Little Things That Mean The World</span>
+        <h2 class="section-title">Why I Love You</h2>
+        <p class="section-subtitle">A few of the millions of reasons you have my heart</p>
+      </div>
+
+      <div class="reasons-container">
+        <div class="reason-card" id="reasonCard">
+          <div class="reason-number" id="reasonNumber">#1</div>
+          <div class="reason-icon" id="reasonIcon">🌸</div>
+          <p class="reason-text" id="reasonText">
+            The way your eyes light up whenever you talk about things you love.
+          </p>
+          <div class="reason-sparkles">✨ ✨ ✨</div>
+        </div>
+
+        <button class="next-reason-btn" id="nextReasonBtn">
+          <span>Tell Me Another Reason 💕</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Photo Memory Gallery Section -->
+    <section class="section gallery-section" id="gallery">
+      <div class="section-header">
+        <span class="section-tag">Cherished Moments</span>
+        <h2 class="section-title">Moments With You</h2>
+        <p class="section-subtitle">Every memory with you is etched in my heart</p>
+      </div>
+
+      <div class="polaroid-grid">
+        <div class="polaroid-item item-1">
+          <div class="tape"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600&auto=format&fit=crop&q=80" alt="Special Moment" loading="lazy">
+          </div>
+          <p class="polaroid-caption">Your smile that lights up my world ✨</p>
+        </div>
+
+        <div class="polaroid-item item-2">
+          <div class="tape"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&auto=format&fit=crop&q=80" alt="Holding Hands" loading="lazy">
+          </div>
+          <p class="polaroid-caption">Walking through life hand in hand 🤝</p>
+        </div>
+
+        <div class="polaroid-item item-3">
+          <div class="tape"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80" alt="Sunset and stars" loading="lazy">
+          </div>
+          <p class="polaroid-caption">Underneath the same starlit sky 🌙</p>
+        </div>
+
+        <div class="polaroid-item item-4">
+          <div class="tape"></div>
+          <div class="polaroid-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=600&auto=format&fit=crop&q=80" alt="Joyful Moments" loading="lazy">
+          </div>
+          <p class="polaroid-caption">Endless laughter & sweet memories 🌸</p>
+        </div>
+      </div>
+      <p class="gallery-note">💡 <em>Tip for Tanish: You can easily swap these pictures with your own favorite photos together!</em></p>
+    </section>
+
+    <!-- Our Song Section (Arctic Monkeys - I Wanna Be Yours) -->
+    <section class="section song-section" id="song">
+      <div class="section-header">
+        <span class="section-tag">Our Song 🎵</span>
+        <h2 class="section-title">I Wanna Be Yours</h2>
+        <p class="section-subtitle">Arctic Monkeys — The rhythm of how I feel about you</p>
+      </div>
+
+      <div class="music-card">
+        <div class="vinyl-container">
+          <div class="vinyl-record" id="vinylRecord">
+            <div class="vinyl-groove groove-1"></div>
+            <div class="vinyl-groove groove-2"></div>
+            <div class="vinyl-groove groove-3"></div>
+            <div class="vinyl-center">
+              <span class="vinyl-heart">🖤</span>
+              <span class="vinyl-tag">AM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="music-details">
+          <div class="now-playing-badge">
+            <span class="equalizer-bar bar-1"></span>
+            <span class="equalizer-bar bar-2"></span>
+            <span class="equalizer-bar bar-3"></span>
+            <span>Dedicated Track</span>
+          </div>
+
+          <h3 class="track-title">I Wanna Be Yours</h3>
+          <p class="track-artist">Arctic Monkeys</p>
+
+          <div class="lyrics-card">
+            <p class="lyrics-quote">
+              "Secrets I have held in my heart,<br>
+              Are harder to hide than I thought.<br>
+              Maybe I just wanna be yours...<br>
+              <span class="lyrics-highlight">I wanna be yours, Shaina 🖤</span>"
+            </p>
+          </div>
+
+          <!-- Official Spotify Player Embed -->
+          <div class="spotify-embed-container">
+            <iframe style="border-radius:12px; width: 100%;" src="https://open.spotify.com/embed/track/5XeFesFbtLpXzIVDNQP22n?utm_source=generator&theme=0" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+
+          <div class="audio-controls">
+            <button class="play-song-btn" id="playSongBtn">
+              <span id="songPlayIcon">▶️</span>
+              <span id="songPlayText">Play Melodic Vibe</span>
+            </button>
+          </div>
+          <!-- Optional local audio file -->
+          <audio id="localAudio" src="audio/i-wanna-be-yours.mp3" preload="none"></audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sweet Interactive Proposal / Question -->
+    <section class="section question-section" id="question">
+      <div class="question-card">
+        <div class="floating-ring">💍</div>
+        <h2 class="question-title">One Quick Question For You, Shaina...</h2>
+        <p class="question-desc">
+          Will you promise to stay by my side, share all your smiles with me, and let me love you forever?
+        </p>
+
+        <div class="btn-group" id="btnGroup">
+          <button class="choice-btn yes-btn" id="yesBtn">
+            Yes, Always & Forever! 🥰
+          </button>
+          <button class="choice-btn no-btn" id="noBtn">
+            No 🙈
+          </button>
+        </div>
+
+        <!-- Success Modal / Celebration Container -->
+        <div class="celebration-container" id="celebrationContainer">
+          <div class="celebration-content">
+            <div class="celebration-emoji">🎉 💖 👩‍❤️‍👨 🌸 💍</div>
+            <h3>I Knew You'd Say Yes!</h3>
+            <p>You've made Tanish the happiest guy in the universe. I love you to infinity and beyond, Shaina!</p>
+            <div class="promise-tag">A Promise Sealed With Love ❤️</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-heart">❤️</div>
+      <p class="footer-main">Created with endless love by <strong>Tanish Dhiman</strong> for <strong>Shaina</strong></p>
+      <p class="footer-sub">Today, tomorrow, and for all our days to come ✨</p>
+    </footer>
+  </main>
+
+  <!-- Confetti library for celebration -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
