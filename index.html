@@ -755,16 +755,16 @@ body {
 
 .polaroid-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 36px;
   width: 100%;
-  max-width: 980px;
+  max-width: 1300px;
   margin-bottom: 30px;
 }
 
 .polaroid-item {
   background: #ffffff;
-  padding: 18px 18px 26px;
+  padding: 20px 20px 30px;
   border-radius: 6px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.09), 0 2px 6px rgba(0, 0, 0, 0.04);
   position: relative;
@@ -797,7 +797,7 @@ body {
 
 .polaroid-img-wrapper {
   width: 100%;
-  height: 230px;
+  height: 340px;
   overflow: hidden;
   border-radius: 3px;
   background: #f7eef1;
@@ -828,6 +828,189 @@ body {
   text-align: center;
   font-style: italic;
   margin-top: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Video Memories Section
+   -------------------------------------------------------------------------- */
+.video-section {
+  width: 100%;
+}
+
+.video-card {
+  width: 100%;
+  max-width: 1100px;
+  background: var(--blush-card);
+  backdrop-filter: blur(18px);
+  border: 1.5px solid var(--card-border);
+  border-radius: 32px;
+  padding: 40px 36px;
+  box-shadow: var(--shadow-romantic);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.video-player-wrapper {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  background: #000;
+  border: 2px solid rgba(255, 143, 163, 0.6);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-player-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  outline: none;
+}
+
+.video-info {
+  text-align: center;
+  max-width: 650px;
+}
+
+.video-tag-pill {
+  display: inline-block;
+  background: rgba(255, 51, 102, 0.12);
+  color: var(--deep-crimson);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.video-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--velvet-wine);
+  margin-bottom: 8px;
+}
+
+.video-desc {
+  font-size: 1.05rem;
+  color: #683849;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.video-playlist-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.video-tab {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid var(--card-border);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--velvet-wine);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.video-tab:hover, .video-tab.active {
+  background: linear-gradient(135deg, #ff2a6d, #ff6b8b);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 42, 109, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Photo Lightbox Modal
+   -------------------------------------------------------------------------- */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(43, 8, 18, 0.88);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-dialog {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: scaleUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-dialog img {
+  max-width: 100%;
+  max-height: 72vh;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  font-family: var(--font-cursive);
+  font-size: 1.6rem;
+  color: var(--velvet-wine);
+  margin-top: 12px;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-rose);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.15) rotate(90deg);
 }
 
 /* --------------------------------------------------------------------------
@@ -1057,6 +1240,21 @@ body {
   max-width: 540px;
   margin: 0 auto 36px;
   line-height: 1.6;
+}
+
+.fun-hint {
+  font-size: 0.9rem;
+  color: #b06080;
+  font-style: italic;
+  margin-top: 14px;
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+}
+
+.fun-hint em {
+  font-weight: 700;
+  color: var(--deep-crimson);
+  font-style: normal;
 }
 
 .btn-group {
@@ -1304,6 +1502,12 @@ body {
           <a href="#journey" class="secondary-btn">
             <span>Our Journey ⏳</span>
           </a>
+          <a href="#gallery" class="secondary-btn">
+            <span>Our Photos 📸</span>
+          </a>
+          <a href="#videos" class="secondary-btn">
+            <span>Our Videos 🎬</span>
+          </a>
           <a href="#song" class="secondary-btn">
             <span>Our Song 🎵</span>
           </a>
@@ -1423,46 +1627,113 @@ body {
     <!-- Photo Memory Gallery Section -->
     <section class="section gallery-section" id="gallery">
       <div class="section-header">
-        <span class="section-tag">Cherished Moments</span>
+        <span class="section-tag">Cherished Moments 📸</span>
         <h2 class="section-title">Moments With You</h2>
-        <p class="section-subtitle">Every memory with you is etched in my heart</p>
+        <p class="section-subtitle">Every photograph holds a piece of my heart</p>
       </div>
 
       <div class="polaroid-grid">
-        <div class="polaroid-item item-1">
+        <div class="polaroid-item item-1" onclick="openLightbox('assets/images/photo1.jpg', 'Lost in you, under the same stars 🌙')">
           <div class="tape"></div>
           <div class="polaroid-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600&auto=format&fit=crop&q=80" alt="Special Moment" loading="lazy">
+            <img src="assets/images/photo1.jpg" alt="Shaina & Tanish" loading="lazy">
           </div>
-          <p class="polaroid-caption">Your smile that lights up my world ✨</p>
+          <p class="polaroid-caption">Lost in you, under the same stars 🌙</p>
         </div>
 
-        <div class="polaroid-item item-2">
+        <div class="polaroid-item item-2" onclick="openLightbox('assets/images/photo2.jpg', 'The whole world, just us two 🌄')">
           <div class="tape"></div>
           <div class="polaroid-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600&auto=format&fit=crop&q=80" alt="Holding Hands" loading="lazy">
+            <img src="assets/images/photo2.jpg" alt="Shaina & Tanish" loading="lazy">
           </div>
-          <p class="polaroid-caption">Walking through life hand in hand 🤝</p>
+          <p class="polaroid-caption">The whole world, just us two 🌄</p>
         </div>
 
-        <div class="polaroid-item item-3">
+        <div class="polaroid-item item-3" onclick="openLightbox('assets/images/photo3.jpg', 'Sunsets are prettier when I&apos;m with you 🌅')">
           <div class="tape"></div>
           <div class="polaroid-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80" alt="Sunset and stars" loading="lazy">
+            <img src="assets/images/photo3.jpg" alt="Shaina & Tanish" loading="lazy">
           </div>
-          <p class="polaroid-caption">Underneath the same starlit sky 🌙</p>
+          <p class="polaroid-caption">Sunsets are prettier with you 🌅</p>
         </div>
 
-        <div class="polaroid-item item-4">
+        <div class="polaroid-item item-4" onclick="openLightbox('assets/images/photo4.jpg', 'My favorite reflection — us 🥰')">
           <div class="tape"></div>
           <div class="polaroid-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=600&auto=format&fit=crop&q=80" alt="Joyful Moments" loading="lazy">
+            <img src="assets/images/photo4.jpg" alt="Shaina & Tanish" loading="lazy">
           </div>
-          <p class="polaroid-caption">Endless laughter & sweet memories 🌸</p>
+          <p class="polaroid-caption">My favorite reflection — us 🥰</p>
         </div>
       </div>
-      <p class="gallery-note">💡 <em>Tip for Tanish: You can easily swap these pictures with your own favorite photos together!</em></p>
+      <p class="gallery-note">✨ Tap any photo to see it in full view</p>
+
     </section>
+
+    <!-- Video Memories Section -->
+    <section class="section video-section" id="videos">
+      <div class="section-header">
+        <span class="section-tag">Cinema of Us 🎬</span>
+        <h2 class="section-title">Our Video Memories</h2>
+        <p class="section-subtitle">Moments captured in motion, treasured forever in my heart</p>
+      </div>
+
+      <div class="video-card">
+        <div class="video-player-wrapper">
+          <video id="mainVideoPlayer" controls playsinline preload="metadata">
+            <source src="assets/videos/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="video-info">
+          <div class="video-tag-pill">❤️ Now Playing</div>
+          <h3 class="video-title" id="videoTitle">Memory #1 — Endless Smiles</h3>
+          <p class="video-desc" id="videoDesc">Nothing brings me more happiness than reliving our sweetest moments together.</p>
+          
+          <div class="video-playlist-tabs" id="videoPlaylist">
+            <button class="video-tab active" data-src="assets/videos/video1.mp4" data-title="Memory #1 — Endless Smiles" data-desc="Nothing brings me more happiness than reliving our sweetest moments together.">
+              <span>📹 Clip 1</span>
+            </button>
+            <button class="video-tab" data-src="assets/videos/video2.mp4" data-title="Memory #2 — Sweet Laughs" data-desc="Hearing your voice and seeing your pure smile on replay.">
+              <span>📹 Clip 2</span>
+            </button>
+            <button class="video-tab" data-src="assets/videos/video3.mp4" data-title="Memory #3 — Beautiful Moments" data-desc="Every glance and gesture reminding me how blessed I am.">
+              <span>📹 Clip 3</span>
+            </button>
+            <button class="video-tab" data-src="assets/videos/video4.mp4" data-title="Memory #4 — Pure Joy" data-desc="The sweetest moments that make all my worries disappear.">
+              <span>📹 Clip 4</span>
+            </button>
+            <button class="video-tab" data-src="assets/videos/video5.mp4" data-title="Memory #5 — Just You & Me" data-desc="Our very own universe where only love matters.">
+              <span>📹 Clip 5</span>
+            </button>
+            <button class="video-tab" data-src="assets/videos/video6.mp4" data-title="Memory #6 — Our Little World" data-desc="Cherishing every single second spent by your side.">
+              <span>📹 Clip 6</span>
+            </button>
+            <button class="video-tab" data-src="assets/videos/video7.mp4" data-title="Memory #7 — Favorite Memory" data-desc="A memory that will forever hold a warm place in my heart.">
+              <span>📹 Clip 7</span>
+            </button>
+            <button class="video-tab" data-src="assets/videos/video8.mp4" data-title="Memory #8 — Sunshine & Love" data-desc="You brighten every day just by being who you are.">
+              <span>📹 Clip 8</span>
+            </button>
+            <button class="video-tab" data-src="assets/videos/video9.mp4" data-title="Memory #9 — Forever Yours" data-desc="With each passing breath, I love you more and more.">
+              <span>📹 Clip 9</span>
+            </button>
+            <button class="video-tab" data-src="assets/videos/video10.mp4" data-title="Memory #10 — To Infinity & Beyond" data-desc="Today, tomorrow, and for all our years to come.">
+              <span>📹 Clip 10</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+      <div class="lightbox-dialog" onclick="event.stopPropagation()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img id="lightboxImg" src="" alt="Full photo view">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+    </div>
 
     <!-- Our Song Section (Arctic Monkeys - I Wanna Be Yours) -->
     <section class="section song-section" id="song">
@@ -1538,6 +1809,7 @@ body {
             No 🙈
           </button>
         </div>
+        <p class="fun-hint">✨ psst... try clicking <em>No</em> for some fun 😄</p>
 
         <!-- Success Modal / Celebration Container -->
         <div class="celebration-container" id="celebrationContainer">
@@ -1575,6 +1847,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initReasonsGenerator();
   initPlayfulProposal();
   initMusicPlayer();
+  initVideoPlayer();
 });
 
 /* --------------------------------------------------------------------------
@@ -1998,6 +2271,55 @@ function initMusicPlayer() {
   if (musicToggleBtn) musicToggleBtn.addEventListener('click', toggleAudio);
   if (playSongBtn) playSongBtn.addEventListener('click', toggleAudio);
   if (vinylRecord) vinylRecord.addEventListener('click', toggleAudio);
+}
+
+/* --------------------------------------------------------------------------
+   7. Video Memories Player & Playlist
+   -------------------------------------------------------------------------- */
+function initVideoPlayer() {
+  const videoPlayer = document.getElementById('mainVideoPlayer');
+  const videoTitle = document.getElementById('videoTitle');
+  const videoDesc = document.getElementById('videoDesc');
+  const tabs = document.querySelectorAll('.video-tab');
+
+  if (!videoPlayer || tabs.length === 0) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const src = tab.getAttribute('data-src');
+      const title = tab.getAttribute('data-title');
+      const desc = tab.getAttribute('data-desc');
+
+      if (videoTitle) videoTitle.textContent = title;
+      if (videoDesc) videoDesc.textContent = desc;
+
+      videoPlayer.src = src;
+      videoPlayer.load();
+      videoPlayer.play().catch(() => {});
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   8. Photo Lightbox Modal
+   -------------------------------------------------------------------------- */
+function openLightbox(src, caption) {
+  const modal = document.getElementById('lightboxModal');
+  const img = document.getElementById('lightboxImg');
+  const cap = document.getElementById('lightboxCaption');
+  if (!modal || !img) return;
+
+  img.src = src;
+  if (cap) cap.textContent = caption || '';
+  modal.style.display = 'flex';
+}
+
+function closeLightbox() {
+  const modal = document.getElementById('lightboxModal');
+  if (modal) modal.style.display = 'none';
 }
   </script>
 </body>
